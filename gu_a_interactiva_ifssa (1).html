@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía IFSSA - Segundo Cuatrimestre</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f1f5f9; /* Fondo general gris suave para mejor contraste con las secciones blancas */
+            color: #334155; /* Texto principal gris pizarra oscuro */
+        }
+
+        /* Colores IFSSA (Predominancia de Rojo) */
+        .brand-red { color: #dc2626; }
+        .bg-brand-red { background-color: #dc2626; }
+        .hover-bg-brand-red:hover { background-color: #b91c1c; }
+        .border-brand-red { border-color: #dc2626; }
+
+        /* Estilo del Scroll */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #dc2626;
+        }
+
+        /* Animación sutil de pulso para llamadas a la acción */
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.02); opacity: 0.95; }
+        }
+        .pulse-banner {
+            animation: pulse-soft 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased bg-[#f1f5f9]">
+
+    <main class="flex-grow space-y-12 pb-16">
+        <!-- Hero Section -->
+        <section id="inicio" class="relative overflow-hidden py-16 lg:py-24 bg-white border-b border-slate-200">
+            <!-- Círculos decorativos de fondo con colores muy suaves -->
+            <div class="absolute top-1/4 left-1/10 w-96 h-96 bg-red-500/5 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute bottom-1/4 right-1/10 w-96 h-96 bg-rose-500/5 rounded-full blur-3xl -z-10"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <!-- Fila Principal: Título y Logo -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    
+                    <div class="md:col-span-8 space-y-6">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-none">
+                            Guía para el <br>
+                            <span class="bg-gradient-to-r from-red-600 to-rose-600 bg-clip-text text-transparent">Segundo Cuatrimestre</span>
+                        </h1>
+                        
+                        <p class="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
+                            Esta guía interactiva está diseñada especialmente para vos. Te explicamos todo lo que necesitás saber sobre condiciones académicas, documentación, inscripción a finales y qué llevar el día del examen.
+                        </p>
+                    </div>
+
+                    <!-- Contenedor del Logo con Brillo y Animación (Fondo Gris Claro con contraste) -->
+                    <div class="md:col-span-4 flex justify-center md:justify-end">
+                        <div class="w-full max-w-[260px] aspect-square bg-slate-100 border-2 border-slate-300 rounded-3xl p-6 shadow-md flex items-center justify-center relative group overflow-hidden transition-all duration-300 hover:border-red-500/30">
+                            <!-- Efecto de luz de fondo sutil -->
+                            <div class="absolute -inset-1 bg-gradient-to-r from-red-500 to-rose-500 rounded-3xl blur opacity-5 group-hover:opacity-10 transition duration-1000 group-hover:duration-200"></div>
+                            
+                            <img src="logo_ifssa_png.jpg" alt="Logo IFSSA" class="max-h-full max-w-full object-contain rounded-2xl z-10" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'text-center space-y-3 z-10\'><svg class=\'w-16 h-20 mx-auto\' viewBox=\'0 0 100 120\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'><rect x=\'0\' y=\'0\' width=\'45\' height=\'35\' rx=\'4\' fill=\'#dc2626\'/><text x=\'22.5\' y=\'25\' fill=\'white\' font-family=\'Arial\' font-weight=\'900\' font-size=\'28\' text-anchor=\'middle\'>I</text><rect x=\'0\' y=\'40\' width=\'45\' height=\'35\' rx=\'4\' fill=\'#dc2626\'/><text x=\'22.5\' y=\'65\' fill=\'white\' font-family=\'Arial\' font-weight=\'900\' font-size=\'28\' text-anchor=\'middle\'>F</text><rect x=\'50\' y=\'40\' width=\'45\' height=\'35\' rx=\'4\' fill=\'#dc2626\'/><text x=\'72.5\' y=\'65\' fill=\'white\' font-family=\'Arial\' font-weight=\'900\' font-size=\'28\' text-anchor=\'middle\'>S</text><rect x=\'0\' y=\'80\' width=\'45\' height=\'35\' rx=\'4\' fill=\'#718096\'/><text x=\'22.5\' y=\'105\' fill=\'white\' font-family=\'Arial\' font-weight=\'900\' font-size=\'28\' text-anchor=\'middle\'>S</text><rect x=\'50\' y=\'80\' width=\'45\' height=\'35\' rx=\'4\' fill=\'#718096\'/><text x=\'72.5\' y=\'105\' fill=\'white\' font-family=\'Arial\' font-weight=\'900\' font-size=\'28\' text-anchor=\'middle\'>A</text></svg><p class=\'text-xs font-bold text-slate-500 tracking-wider\'>IFSSA INSTITUTO</p></div>'">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Banner interactivo de acceso rápido (Gris sutil con borde rojo sutil) -->
+                <div class="bg-slate-100 border border-slate-300 rounded-3xl p-6 sm:p-8 relative shadow-sm max-w-4xl mr-auto">
+                    <div class="absolute -top-3 right-6 bg-red-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-lg">
+                        ATENCIÓN
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i data-lucide="info" class="text-red-600 w-5 h-5"></i>
+                        Para Estudiantes IFSSA
+                    </h3>
+                    <p class="text-sm text-slate-700 leading-relaxed mb-6">
+                        La inscripción a las materias de cursado <strong class="text-red-600">la realiza Administración</strong>. ¡No tenés que realizar trámites de inscripción a materias durante el cuatrimestre!
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-slate-300/80 pt-6">
+                        <div class="flex gap-3">
+                            <div class="w-8 h-8 rounded-full bg-red-600/10 flex items-center justify-center text-red-600 flex-shrink-0">
+                                <i data-lucide="settings" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-800">¿Qué hace Administración?</h4>
+                                <p class="text-xs text-slate-600">Evalúa tu desempeño y te asigna automáticamente tu condición académica final en cada materia.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="w-8 h-8 rounded-full bg-emerald-600/10 flex items-center justify-center text-emerald-600 flex-shrink-0">
+                                <i data-lucide="user-check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-800">¿Qué tenés que hacer vos?</h4>
+                                <p class="text-xs text-slate-600">Inscribirte de forma manual para rendir los exámenes finales cuando las fechas se publiquen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Interactiva: Las Tres Condiciones Académicas -->
+        <section id="condiciones" class="py-16 bg-white rounded-3xl border border-slate-200 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 shadow-sm">
+            <div>
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Las Tres Condiciones Académicas</h2>
+                    <p class="text-slate-600">
+                        Al finalizar el cuatrimestre, se te asignará una de estas condiciones en cada materia. Utilizá nuestro simulador interactivo de abajo para ver en cuál quedarías.
+                    </p>
+                </div>
+
+                <!-- Tarjetas de Condiciones (Gris más marcado, bordes más visibles) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    
+                    <!-- Promoción -->
+                    <div class="bg-slate-100 border-2 border-slate-200/80 hover:border-amber-400 rounded-2xl p-6 transition-all duration-300 hover:translate-y-[-4px] flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-600 mb-6">
+                                <i data-lucide="crown" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Promoción</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                                Aprobás la materia de forma directa sin rendir examen final. Esta condición solo está disponible en algunas materias, pero <strong class="text-red-600 font-semibold">sí debés inscribirte a la mesa de examen</strong> de forma obligatoria.
+                            </p>
+                        </div>
+                        <div class="border-t border-slate-300/80 pt-4 mt-auto">
+                            <span class="text-xs font-bold text-slate-700 uppercase tracking-widest block mb-2">En resumen:</span>
+                            <div class="flex items-center gap-2 text-xs text-slate-700">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 font-bold"></i> Notas promedio de 8+ o similar
+                            </div>
+                            <div class="flex items-center gap-2 text-xs text-slate-700 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 font-bold"></i> Inscripción a mesa obligatoria
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Regular -->
+                    <div class="bg-slate-100 border-2 border-slate-200/80 hover:border-blue-400 rounded-2xl p-6 transition-all duration-300 hover:translate-y-[-4px] flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-600 mb-6">
+                                <i data-lucide="check-circle" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Regular</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                                Se obtiene al aprobar tus exámenes parciales y cumplir con el mínimo exigido de asistencia. Con esta condición podés inscribirte y rendir el examen final de la materia como alumno regular.
+                            </p>
+                        </div>
+                        <div class="border-t border-slate-300/80 pt-4 mt-auto">
+                            <span class="text-xs font-bold text-slate-700 uppercase tracking-widest block mb-2">En resumen:</span>
+                            <div class="flex items-center gap-2 text-xs text-slate-700">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 font-bold"></i> Parciales aprobados
+                            </div>
+                            <div class="flex items-center gap-2 text-xs text-slate-700 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600 font-bold"></i> Más del 80% de asistencia
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Libre -->
+                    <div class="bg-slate-100 border-2 border-slate-200/80 hover:border-orange-400 rounded-2xl p-6 transition-all duration-300 hover:translate-y-[-4px] flex flex-col justify-between shadow-sm">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-600 mb-6">
+                                <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Libre</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                                Se da en dos situaciones: tener los parciales aprobados pero menos de la asistencia requerida, o bien tener parciales desaprobados pero asistencia al día. Podés rendir examen final pero en condición libre.
+                            </p>
+                        </div>
+                        <div class="border-t border-slate-300/80 pt-4 mt-auto">
+                            <span class="text-xs font-bold text-slate-700 uppercase tracking-widest block mb-2">En resumen:</span>
+                            <div class="flex items-center gap-2 text-xs text-slate-700">
+                                <i data-lucide="alert-circle" class="w-4 h-4 text-orange-600 font-bold"></i> Parciales OK, menos del 80% asistencia
+                            </div>
+                            <div class="flex items-center gap-2 text-xs text-slate-700 mt-1">
+                                <i data-lucide="alert-circle" class="w-4 h-4 text-orange-600 font-bold"></i> Parciales desaprobados, asistencia OK
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Alerta Recursar (Contraste alto) -->
+                <div class="bg-red-50 border-2 border-red-200 border-l-4 border-l-red-600 p-6 rounded-2xl mb-12 shadow-sm">
+                    <div class="flex gap-4">
+                        <div class="text-red-600">
+                            <i data-lucide="x-circle" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-lg">⚠️ ¡Atención! Deberás Recursar</h4>
+                            <p class="text-sm text-slate-700 mt-1">
+                                Si desaprobás los exámenes parciales y además no cumplís con el porcentaje mínimo del 80% de asistencia, deberás cursar nuevamente la materia en el siguiente cuatrimestre. <strong class="text-red-600">No podrás rendir el final bajo ninguna condición</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simulador de Condición Académica (Fondo Gris Marcado) -->
+                <div class="bg-slate-100 border border-slate-300 rounded-3xl p-6 sm:p-10 max-w-3xl mx-auto shadow-md">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-red-600/10 flex items-center justify-center text-red-600">
+                            <i data-lucide="calculator" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Simulador de Condición Académica</h3>
+                            <p class="text-xs text-slate-500">Ingresá tu asistencia estimada y nota para calcular tu resultado.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                        <!-- Asistencia -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-slate-700 flex justify-between">
+                                <span>Asistencia del Cuatrimestre:</span>
+                                <span id="asistenciaVal" class="text-red-600 font-bold">85%</span>
+                            </label>
+                            <input type="range" id="asistenciaInput" min="0" max="100" value="85" class="w-full h-2 bg-slate-300 rounded-lg appearance-none cursor-pointer accent-red-600">
+                            <div class="flex justify-between text-xs text-slate-400">
+                                <span>0%</span>
+                                <span>80% (Límite Regular)</span>
+                                <span>100%</span>
+                            </div>
+                        </div>
+
+                        <!-- Estado de Parciales -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-slate-700">
+                                Notas de los Parciales:
+                            </label>
+                            <select id="parcialesInput" class="w-full bg-white border border-slate-300 text-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-red-600 shadow-sm">
+                                <option value="aprobado">Todos los Parciales Aprobados</option>
+                                <option value="desaprobado">Parciales Desaprobados / Pendientes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Resultado del Simulador (Fondo blanco contrastante) -->
+                    <div id="resultadoSimulador" class="p-6 rounded-2xl bg-white border border-slate-300 flex items-start gap-4 shadow-sm">
+                        <div id="simuladorIcon" class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 id="simuladorTitulo" class="font-extrabold text-slate-900 text-lg">Tu Condición Académica: Regular</h4>
+                            <p id="simuladorDesc" class="text-sm text-slate-600 mt-1">
+                                Felicitaciones, cumplís con las condiciones. Podés inscribirte y rendir el examen final de la materia en las mesas habilitadas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección: Lista de Control de Documentación / Legajo (Fondo Blanco) -->
+        <section id="legajo" class="py-16 bg-white rounded-3xl border border-slate-200 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 shadow-sm">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-red-600 block">Requisito Obligatorio</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                        Tu Legajo Debe <br>Estar Completo
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        Antes de inscribirte a cualquier examen final, asegurate de tener toda tu documentación completa y en regla. El área de Administración controla los legajos y, sin los papeles listos, <strong class="text-slate-900">no podrás rendir</strong>.
+                    </p>
+                </div>
+
+                <!-- Checkbox Interactivo del Legajo (Fondo gris estructurado) -->
+                <div class="lg:col-span-7">
+                    <div class="bg-slate-100 border border-slate-300 rounded-3xl p-6 sm:p-10 shadow-sm">
+                        <div class="flex items-center justify-between mb-8">
+                            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                                <i data-lucide="folder-check" class="text-red-600 w-5 h-5"></i>
+                                Lista de Control de Documentos
+                            </h3>
+                            <span id="progresoLegajo" class="text-xs font-bold text-red-600 bg-red-100 px-3 py-1 rounded-full">
+                                0% Completado
+                            </span>
+                        </div>
+
+                        <!-- Barra de progreso -->
+                        <div class="w-full bg-white h-2 rounded-full mb-8 overflow-hidden border border-slate-300">
+                            <div id="barraProgreso" class="bg-red-600 h-full w-0 transition-all duration-300"></div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- DNI -->
+                            <label class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 cursor-pointer hover:border-red-400 hover:bg-slate-50 transition-all duration-200 shadow-sm">
+                                <input type="checkbox" class="legajo-check mt-1 w-5 h-5 rounded border-slate-300 bg-white text-red-600 focus:ring-red-500 accent-red-600">
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm sm:text-base">Fotocopia de DNI</h4>
+                                    <p class="text-xs text-slate-500 mt-1">Obligatoria para tu legajo personal. Podés traer una copia física y la autenticamos directamente en el instituto con el original.</p>
+                                </div>
+                            </label>
+
+                            <!-- Partida Nacimiento -->
+                            <label class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 cursor-pointer hover:border-red-400 hover:bg-slate-50 transition-all duration-200 shadow-sm">
+                                <input type="checkbox" class="legajo-check mt-1 w-5 h-5 rounded border-slate-300 bg-white text-red-600 focus:ring-red-500 accent-red-600">
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm sm:text-base">Partida de Nacimiento</h4>
+                                    <p class="text-xs text-slate-500 mt-1">Copia legalizada de tu partida. Traé el original y una copia simple para que podamos certificarla en recepción.</p>
+                                </div>
+                            </label>
+
+                            <!-- Fotos -->
+                            <label class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 cursor-pointer hover:border-red-400 hover:bg-slate-50 transition-all duration-200 shadow-sm">
+                                <input type="checkbox" class="legajo-check mt-1 w-5 h-5 rounded border-slate-300 bg-white text-red-600 focus:ring-red-500 accent-red-600">
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm sm:text-base">2 Fotos Carnet (4 x 4)</h4>
+                                    <p class="text-xs text-slate-500 mt-1">Fotografías actuales, de frente y con fondo claro. Se utilizan de forma obligatoria para la libreta física de calificaciones y legajo.</p>
+                                </div>
+                            </label>
+
+                            <!-- Ficha Médica -->
+                            <label class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 cursor-pointer hover:bg-slate-50 transition-all duration-200 shadow-sm">
+                                <input type="checkbox" class="legajo-check mt-1 w-5 h-5 rounded border-slate-300 bg-white text-red-600 focus:ring-red-500 accent-red-600">
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm sm:text-base">Ficha Médica Autorizada</h4>
+                                    <p class="text-xs text-slate-500 mt-1">Formulario de salud completo y firmado por un profesional médico habilitado. Podés solicitar la planilla pre-impresa en recepción.</p>
+                                </div>
+                            </label>
+
+                            <!-- Título Secundario -->
+                            <label class="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 cursor-pointer hover:bg-slate-50 transition-all duration-200 shadow-sm">
+                                <input type="checkbox" class="legajo-check mt-1 w-5 h-5 rounded border-slate-300 bg-white text-red-600 focus:ring-red-500 accent-red-600">
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm sm:text-base">Constancia de Título en Trámite</h4>
+                                    <p class="text-xs text-slate-500 mt-1"><span class="text-emerald-600 font-semibold">Habilitado:</span> Se permite rendir exámenes finales presentando la constancia de título secundario en trámite.</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección de Inscripción a Exámenes Finales (Gris estructurado) -->
+        <section id="finales" class="py-16 bg-white rounded-3xl border border-slate-200 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 shadow-sm">
+            <div>
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-widest text-red-600">Trámite Obligatorio</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Inscripción a Finales: Los 3 Pasos</h2>
+                    <p class="text-slate-600">
+                        El proceso de inscripción es secuencial e indivisible. Debés completar cada uno de los pasos en orden para que tu inscripción quede debidamente registrada y confirmada.
+                    </p>
+                    <p class="inline-flex items-center gap-2 text-sm text-red-700 bg-red-50/80 px-4 py-2.5 rounded-2xl border border-red-200 font-semibold max-w-2xl mx-auto mt-2 text-left sm:text-center shadow-xs">
+                        <i data-lucide="monitor" class="w-5 h-5 flex-shrink-0 text-red-600"></i>
+                        <span>Le recomendamos realizar el proceso desde una <strong>computadora</strong> y seguir los pasos del tutorial que encontrará más abajo.</span>
+                    </p>
+                </div>
+
+                <!-- Tarjetas de Pasos en Grid (Gris más marcado para mayor contraste) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative mb-12">
+                    <!-- Conexión visual en escritorio -->
+                    <div class="hidden md:block absolute top-1/2 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-red-600/30 via-slate-300 to-red-600/30 -translate-y-1/2 z-0"></div>
+
+                    <!-- Paso 1 -->
+                    <div class="bg-slate-100 border-2 border-slate-200 rounded-3xl p-8 text-center relative z-10 transition-all duration-300 hover:border-red-500 hover:shadow-md shadow-sm">
+                        <div class="w-16 h-16 rounded-full bg-red-600/10 border-2 border-red-600/30 flex items-center justify-center text-red-600 text-xl font-black mx-auto mb-6">
+                            1
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Seleccionar Materia</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Ingresar a <a href="https://ifssa.quinttos.com" target="_blank" class="text-red-600 hover:text-red-700 underline font-extrabold transition-colors">ifssa.quinttos.com</a>, dirigirse a la sección <strong class="text-slate-900">Mesa de examen</strong> que se encuentra a la izquierda de la web y buscar las materias a las cuales te vas a inscribir.
+                        </p>
+                    </div>
+
+                    <!-- Paso 2 -->
+                    <div class="bg-slate-100 border-2 border-slate-200 rounded-3xl p-8 text-center relative z-10 transition-all duration-300 hover:border-red-500 hover:shadow-md shadow-sm">
+                        <div class="w-16 h-16 rounded-full bg-red-600/10 border-2 border-red-600/30 flex items-center justify-center text-red-600 text-xl font-black mx-auto mb-6">
+                            2
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Abonar Mesa</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Realizá el pago correspondiente al derecho de examen para la mesa elegida. Podés abonar de manera online o por los medios habilitados.
+                        </p>
+                    </div>
+
+                    <!-- Paso 3 -->
+                    <div class="bg-slate-100 border-2 border-slate-200 rounded-3xl p-8 text-center relative z-10 transition-all duration-300 hover:border-red-500 hover:shadow-md shadow-sm">
+                        <div class="w-16 h-16 rounded-full bg-emerald-100 border-2 border-emerald-500/30 flex items-center justify-center text-emerald-600 text-xl font-black mx-auto mb-6">
+                            3
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Confirmar Inscripción</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            <span class="text-emerald-600 font-semibold">Paso clave:</span> Asegurate de finalizar el proceso para registrar tu nombre en el acta oficial de examen.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-red-50 border border-red-200 rounded-2xl p-6 text-center max-w-2xl mx-auto shadow-sm">
+                    <p class="text-sm text-slate-700">
+                        🚨 <strong class="text-red-600">¡No lo olvides!</strong> Sin completar los 3 pasos en orden, tu inscripción NO queda registrada. Verificá tu comprobante en el sistema antes de presentarte a la mesa.
+                    </p>
+                </div>
+
+                <!-- Sección del Video Tutorial Integrado -->
+                <div class="mt-16 max-w-4xl mx-auto space-y-6">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-slate-900">Video Tutorial de Inscripción</h3>
+                        <p class="text-sm text-slate-500 mt-1">Seguí el paso a paso visual del sistema para evitar errores de carga.</p>
+                    </div>
+
+                    <!-- Reproductor y enlace del Drive (Gris más marcado) -->
+                    <div class="bg-slate-100 border border-slate-300 rounded-3xl p-4 sm:p-6 shadow-sm">
+                        <!-- Frame representativo o botón de reproducción directo -->
+                        <div class="aspect-video w-full rounded-2xl overflow-hidden bg-slate-300 border border-slate-400 flex flex-col items-center justify-center text-center p-6 relative group">
+                            <!-- Overlay estético con gradiente sutil -->
+                            <div class="absolute inset-0 bg-slate-900/50 z-10"></div>
+                            
+                            <!-- Iconografía y textos centrales -->
+                            <div class="relative z-20 space-y-4 max-w-md">
+                                <div class="w-16 h-16 rounded-full bg-red-600 text-white flex items-center justify-center mx-auto shadow-lg shadow-red-600/30 group-hover:scale-110 transition-transform duration-300 cursor-pointer animate-pulse">
+                                    <i data-lucide="play" class="w-8 h-8 fill-current"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-white shadow-sm">¿Cómo inscribirse a un final?</h4>
+                                <p class="text-xs text-slate-100">Hacé clic abajo para abrir el videotutorial completo alojado de manera oficial en Google Drive.</p>
+                                
+                                <div class="pt-2">
+                                    <a href="https://drive.google.com/file/d/1xYU8VHtrc-lW__B75-7NiFUc7V_hBzmM/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold px-6 py-3 rounded-xl transition-colors shadow-md">
+                                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                                        <span>Reproducir Tutorial Oficial</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tres Reglas de Oro de Fechas -->
+                <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="bg-slate-100 border border-slate-300 border-t-4 border-t-red-600 rounded-b-2xl p-6 shadow-sm">
+                        <div class="flex items-center gap-2 text-slate-900 font-bold text-lg mb-3">
+                            <span class="text-red-600 font-extrabold text-xl">1</span>
+                            Fechas y Horarios
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Las <strong class="text-slate-900">fechas de las mesas de examen</strong> las podés ver en el **calendario académico** que se encuentra en el **campus virtual**. Luego, debés estar atento al <strong class="text-slate-900">auditorio web</strong> para poder consultar los **días y horarios** en que se llevará a cabo cada mesa.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-100 border border-slate-300 border-t-4 border-t-red-600 rounded-b-2xl p-6 shadow-sm">
+                        <div class="flex items-center gap-2 text-slate-900 font-bold text-lg mb-3">
+                            <span class="text-red-600 font-extrabold text-xl">2</span>
+                            Cuotas al día
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Para poder inscribirte en cualquier mesa de examen final debés tener tus cuotas arancelarias al día, es decir, <span class="text-red-600 font-semibold">no poseer ninguna deuda</span>.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-100 border border-slate-300 border-t-4 border-t-red-600 rounded-b-2xl p-6 shadow-sm">
+                        <div class="flex items-center gap-2 text-slate-900 font-bold text-lg mb-3">
+                            <span class="text-red-600 font-extrabold text-xl">3</span>
+                            Sin excepciones
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            No se reciben inscripciones fuera de término. Sin excepciones.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección: El Día del Examen - Qué Llevar -->
+        <section id="dia-examen" class="py-16 bg-white rounded-3xl border border-slate-200 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 shadow-sm">
+            <div>
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-widest text-red-600">Guía de Examen</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">El Día del Examen: ¿Qué Tenés que Llevar?</h2>
+                    <p class="text-slate-600">
+                        Evitá inconvenientes el día de tu examen. Sin los siguientes requisitos de vestimenta y documentación oficial, los docentes examinadores no te permitirán el ingreso al aula.
+                    </p>
+                </div>
+
+                <!-- Elemento Universal Obligatorio -->
+                <div class="max-w-xl mx-auto mb-12">
+                    <div class="bg-slate-100 border border-slate-300 rounded-2xl p-6 flex items-start gap-4 shadow-sm">
+                        <div class="w-12 h-12 rounded-xl bg-red-600/10 flex items-center justify-center text-red-600 flex-shrink-0">
+                            <i data-lucide="book-open" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                                Libreta de Calificaciones
+                                <span class="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full uppercase font-bold">Obligatorio</span>
+                            </h3>
+                            <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                                Es el documento oficial de tu trayectoria académica. Debe contar con tu <strong class="text-red-600">fotografía de carnet adherida</strong>. Sin tu libreta en mano no podés rendir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Requisitos por Orientación / Carreras -->
+                <div class="text-center mb-8">
+                    <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Seleccioná tu Orientación Académica</p>
+                </div>
+
+                <!-- Filtros Interactivos -->
+                <div class="flex justify-center gap-4 mb-10">
+                    <button onclick="filtrarCarrera('salud')" id="btn-salud" class="carrera-btn px-5 py-2.5 rounded-xl text-sm font-bold bg-brand-red text-white transition-all duration-200 shadow-md">
+                        Carreras de Salud
+                    </button>
+                    <button onclick="filtrarCarrera('diseno')" id="btn-diseno" class="carrera-btn px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-300 transition-all duration-200">
+                        Servicios y Diseño
+                    </button>
+                </div>
+
+                <!-- Tarjetas Dinámicas de Indumentaria (Gris marcado contrastante) -->
+                <div class="max-w-2xl mx-auto">
+                    <!-- Salud -->
+                    <div id="card-salud" class="carrera-card bg-slate-100 border border-slate-300 rounded-3xl p-8 transition-all duration-300 shadow-sm">
+                        <div class="flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left">
+                            <div class="w-20 h-20 rounded-2xl bg-red-500/10 flex items-center justify-center text-red-600 flex-shrink-0">
+                                <i data-lucide="heart-handshake" class="w-10 h-10"></i>
+                            </div>
+                            <div class="space-y-3">
+                                <h3 class="text-xl font-bold text-slate-900">Vestimenta: Área de la Salud</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    Para todas las mesas de examen en carreras de salud, debés presentarte con el <strong class="text-red-600">AMBO institucional completo</strong> de IFSSA.
+                                </p>
+                                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold bg-red-100 text-red-700">
+                                    Requisito Excluyente de Mesa
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Diseño / Servicios -->
+                    <div id="card-diseno" class="carrera-card bg-slate-100 border border-slate-300 rounded-3xl p-8 hidden transition-all duration-300 shadow-sm">
+                        <div class="flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left">
+                            <div class="w-20 h-20 rounded-2xl bg-red-500/10 flex items-center justify-center text-red-600 flex-shrink-0">
+                                <i data-lucide="palette" class="w-10 h-10"></i>
+                            </div>
+                            <div class="space-y-3">
+                                <h3 class="text-xl font-bold text-slate-900">Vestimenta: Servicios y Diseño</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    Para presentarte en las mesas de examen final, es de carácter obligatorio asistir con la <strong class="text-red-600">chomba negra oficial de IFSSA</strong>, la cual pueden adquirir en la sede.
+                                </p>
+                                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold bg-red-100 text-red-700">
+                                    Requisito Formal Obligatorio
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloque de Soporte y Contacto -->
+                <div class="mt-16 bg-gradient-to-r from-red-600 to-rose-600 rounded-3xl p-8 text-center max-w-3xl mx-auto shadow-xl shadow-red-600/15">
+                    <h3 class="text-2xl font-black text-white mb-2 flex items-center justify-center gap-2">
+                        <i data-lucide="help-circle" class="w-6 h-6"></i>
+                        ¿Tenés dudas o consultas?
+                    </h3>
+                    <p class="text-sm text-red-50 max-w-lg mx-auto leading-relaxed">
+                        Cualquier duda escribinos a <a href="mailto:alumnos@ifssa.edu.ar" class="text-white underline font-bold hover:text-red-100 transition-colors">alumnos@ifssa.edu.ar</a> o consulta en tu sede.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-200 border-t border-slate-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <h2 class="text-lg font-extrabold tracking-wider text-slate-800">
+                IFSSA INSTITUTO DE FORMACIÓN SUPERIOR
+            </h2>
+            <p class="text-xs text-red-600 font-bold tracking-wide uppercase">
+                Desarrollado por Dpto. Bienestar Estudiantil
+            </p>
+            <div class="text-[10px] text-slate-500 uppercase tracking-widest pt-4 border-t border-slate-300 max-w-xs mx-auto">
+                © 2026 IFSSA • Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lógica de Interactividad -->
+    <script>
+        // Inicializar los iconos de Lucide
+        lucide.createIcons();
+
+        // 1. LÓGICA DEL SIMULADOR DE CONDICIÓN
+        const asistenciaInput = document.getElementById('asistenciaInput');
+        const asistenciaVal = document.getElementById('asistenciaVal');
+        const parcialesInput = document.getElementById('parcialesInput');
+
+        const resultadoSimulador = document.getElementById('resultadoSimulador');
+        const simuladorIcon = document.getElementById('simuladorIcon');
+        const simuladorTitulo = document.getElementById('simuladorTitulo');
+        const simuladorDesc = document.getElementById('simuladorDesc');
+
+        function actualizarSimulador() {
+            const asistencia = parseInt(asistenciaInput.value);
+            const parciales = parcialesInput.value;
+            asistenciaVal.textContent = `${asistencia}%`;
+
+            // Lógica basada en el PDF original de IFSSA:
+            // - Regular: parciales aprobados y >= 80% asistencia
+            // - Libre: Dos opciones:
+            //      1. Parciales aprobados pero menos del 80% asistencia
+            //      2. Parciales desaprobados pero >= 80% asistencia
+            // - Recursar: Desaprobado en parciales y menos del 80% asistencia
+
+            if (parciales === 'aprobado' && asistencia >= 80) {
+                // REGULAR o PROMOCIÓN (Asumimos Regular por defecto)
+                resultadoSimulador.className = "p-6 rounded-2xl bg-white border border-emerald-300/80 flex items-start gap-4 transition-all duration-300 shadow-xs";
+                simuladorIcon.innerHTML = `<i data-lucide="check-circle" class="w-5 h-5 text-emerald-600"></i>`;
+                simuladorIcon.className = "w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0";
+                simuladorTitulo.textContent = "Tu Condición Académica: Regular";
+                simuladorTitulo.className = "font-extrabold text-slate-900 text-lg";
+                simuladorDesc.textContent = "Felicitaciones, cumplís con las condiciones. Podés inscribirte y rendir el examen final de la materia en las mesas habilitadas.";
+                if (asistencia >= 90) {
+                    simuladorTitulo.textContent = "Condición: Regular (Apta para Promoción)";
+                    simuladorDesc.textContent = "¡Asistencia excelente! Si tu materia cuenta con el régimen de promoción directa y notas altas, podrías promocionarla directamente sin dar el examen final.";
+                }
+            } else if ((parciales === 'aprobado' && asistencia < 80) || (parciales === 'desaprobado' && asistencia >= 80)) {
+                // LIBRE
+                resultadoSimulador.className = "p-6 rounded-2xl bg-white border border-orange-300/80 flex items-start gap-4 transition-all duration-300 shadow-xs";
+                simuladorIcon.innerHTML = `<i data-lucide="alert-triangle" class="w-5 h-5 text-orange-400"></i>`;
+                simuladorIcon.className = "w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 flex-shrink-0";
+                simuladorTitulo.textContent = "Tu Condición Académica: Libre";
+                simuladorTitulo.className = "font-extrabold text-slate-900 text-lg";
+                if (parciales === 'aprobado' && asistencia < 80) {
+                    simuladorDesc.textContent = "Tenés los parciales aprobados pero tu asistencia es inferior al 80%. Podés rendir examen final de la materia, pero lo harás bajo la condición de alumno Libre.";
+                } else {
+                    simuladorDesc.textContent = "Tenés la asistencia al día pero tus parciales están desaprobados o pendientes. Podés rendir examen final de la materia, pero en condición de Libre.";
+                }
+            } else {
+                // RECURSAR
+                resultadoSimulador.className = "p-6 rounded-2xl bg-white border border-red-300/80 flex items-start gap-4 transition-all duration-300 shadow-xs";
+                simuladorIcon.innerHTML = `<i data-lucide="x-circle" class="w-5 h-5 text-red-600"></i>`;
+                simuladorIcon.className = "w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 flex-shrink-0";
+                simuladorTitulo.textContent = "Condición Académica: Recursar";
+                simuladorTitulo.className = "font-extrabold text-red-600 text-lg";
+                simuladorDesc.textContent = "No cumplís con los parciales aprobados ni con la asistencia requerida. Deberás volver a cursar la materia el siguiente cuatrimestre. No estás habilitado para el final.";
+            }
+            lucide.createIcons();
+        }
+
+        asistenciaInput.addEventListener('input', actualizarSimulador);
+        parcialesInput.addEventListener('change', actualizarSimulador);
+
+
+        // 2. LÓGICA DE LISTA DE CONTROL DE LEGAJO
+        const checkboxes = document.querySelectorAll('.legajo-check');
+        const progresoTexto = document.getElementById('progresoLegajo');
+        const barraProgreso = document.getElementById('barraProgreso');
+
+        function actualizarProgresoLegajo() {
+            const total = checkboxes.length;
+            let completados = 0;
+            checkboxes.forEach(chk => {
+                if (chk.checked) completados++;
+            });
+
+            const porcentaje = Math.round((completados / total) * 100);
+            progresoTexto.textContent = `${porcentaje}% Completado`;
+            barraProgreso.style.width = `${porcentaje}%`;
+
+            if (porcentaje === 100) {
+                progresoTexto.className = "text-xs font-bold text-emerald-600 bg-emerald-100 px-3 py-1 rounded-full animate-bounce";
+                barraProgreso.className = "bg-emerald-500 h-full transition-all duration-300";
+            } else {
+                progresoTexto.className = "text-xs font-bold text-red-600 bg-red-100 px-3 py-1 rounded-full";
+                barraProgreso.className = "bg-red-600 h-full transition-all duration-300";
+            }
+        }
+
+        checkboxes.forEach(chk => {
+            chk.addEventListener('change', actualizarProgresoLegajo);
+        });
+
+
+        // 3. FILTRO DE INDUMENTARIA
+        function filtrarCarrera(carrera) {
+            const cardSalud = document.getElementById('card-salud');
+            const cardDiseno = document.getElementById('card-diseno');
+            const btnSalud = document.getElementById('btn-salud');
+            const btnDiseno = document.getElementById('btn-diseno');
+
+            if (carrera === 'salud') {
+                cardSalud.classList.remove('hidden');
+                cardDiseno.classList.add('hidden');
+                
+                btnSalud.className = "px-5 py-2.5 rounded-xl text-sm font-bold bg-brand-red text-white transition-all duration-200 shadow-md";
+                btnDiseno.className = "px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-300 transition-all duration-200";
+            } else {
+                cardSalud.classList.add('hidden');
+                cardDiseno.classList.remove('hidden');
+
+                btnSalud.className = "px-5 py-2.5 rounded-xl text-sm font-bold bg-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-300 transition-all duration-200";
+                btnDiseno.className = "px-5 py-2.5 rounded-xl text-sm font-bold bg-brand-red text-white transition-all duration-200 shadow-md";
+            }
+        }
+
+        // Ejecutar simulación base al inicio
+        actualizarSimulador();
+    </script>
+</body>
+</html>
